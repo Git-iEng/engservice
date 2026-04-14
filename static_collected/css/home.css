@@ -123,13 +123,14 @@ body {
 }
 
 .bo-btn-primary {
-  background: linear-gradient(135deg, #0f766e, #155e75);
+  background: #0f766e;
   color: #ffffff;
   box-shadow: var(--bo-shadow-soft);
 }
 
 .bo-btn-primary:hover {
   transform: translateY(-2px);
+  background: #0d5f5a;
 }
 
 .bo-btn-ghost {
@@ -684,5 +685,397 @@ body {
 
   .bo-mvv-image {
     width: 100%;
+  }
+}
+
+/* Reset default body and html padding/margin */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    overflow-x: hidden; /* Prevent sideways scroll */
+}
+ 
+/* Apply box-sizing border-box globally */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.back-services {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    background-image: url(../images/banner/designpannel.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 70vh;
+    padding: 40px 20px;
+}
+
+.back-services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.358); /* White color with 50% opacity */
+    z-index: 1;
+}
+
+.back-services h1,
+.back-services p {
+    position: relative;
+    z-index: 2; /* Ensure content appears above the overlay */
+}
+
+.back-services h1 {
+font-size: 7rem;
+  text-align: center;
+  margin-top: 19rem;
+}
+
+.back-services p {
+    font-size: 2rem;
+}
+
+/* Reset default body and html padding/margin */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  overflow-x: hidden; /* Prevent sideways scroll */
+}
+
+/* Apply box-sizing border-box globally */
+*, *::before, *::after {
+  box-sizing: border-box;
+}.software-product {
+  width: 100vw;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+  padding: 0;
+  position: relative;
+  overflow: hidden !important;
+  box-sizing: border-box;
+}
+
+.software-product h1 {
+  color: #0d3281;
+  font-size: 5.5rem; /* Default font size for large screens */
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.software-product h2 {
+  color: #0d3281;
+  font-size: 3rem; /* Default font size for large screens */
+  /* margin: 10px 0; */
+}
+
+/* Media Queries */
+
+/* For large tablets and small laptops (1000px - 1200px) */
+@media (max-width: 1200px) and (min-width: 1000px) {
+  .software-product h1 {
+    font-size: 4.5rem; /* Reduce font size */
+  }
+
+  .software-product h2 {
+    font-size: 2.5rem; /* Reduce font size */
+  }
+}
+
+/* For tablets (760px - 1000px) */
+@media (max-width: 1000px) and (min-width: 760px) {
+
+
+  .software-product h1 {
+    font-size: 3.5rem; /* Smaller font size for tablets */
+  }
+
+  .software-product h2 {
+    font-size: 2rem; /* Smaller font size for tablets */
+  }
+}
+
+/* For mobile devices (320px - 760px) */
+@media (max-width: 760px) {
+  .software-product {
+    /* padding: 15px; */
+    text-align: center;
+  }
+
+  .software-product h1 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .software-product h2 {
+    font-size: 1.6rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* For very small screens (less than 320px) */
+@media (max-width: 320px) {
+  .software-product h1 {
+    font-size: 2rem; /* Further reduce font size */
+  }
+
+  .software-product h2 {
+    font-size: 1.6rem; /* Further reduce font size */
+  }
+}
+/* background */
+.home-software {
+  position: relative;
+  padding-top: 60px;
+  background-image: url(../images/banner/soft.avif);
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  width: 100%; /* Full width for responsiveness */
+  height: 600px; /* 85% of the viewport height */
+  margin-top: 50px;
+  display: flex; /* Use flexbox for better control of child positioning */
+  align-items: center; /* Vertically centers the text */
+  justify-content: center; /* Aligns the  ` text to the left */
+  padding-left: 20px; /* Adds some padding for left alignment */
+}
+.home-software h1 {
+  font-size: 6.8rem;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* font-weight: bold;  */
+  /* top: 55%; */
+  /* padding: calc(300px/2) 20px 20px 20px; */
+  /* padding-top: 200px; */
+  margin-top: 200px;
+  color: white; /* Adjust for readability */
+  margin: 0; /* Removes default margin */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Adds text shadow for better visibility */
+}
+@media (max-width: 768px) {
+  .home-software h1 {
+      font-size: 3.5rem; /* Adjust font size for tablets */
+  }
+}
+@media (max-width: 480px) {
+  .home-software h1 {
+      margin-top: 30px;
+      /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+      font-weight: bold;
+      /* text-shadow: 2px 2px 5px rgb(255, 255, 255); */
+      font-size: 4.8rem; 
+      /* Further adjustment for very small screens */
+  }
+  .home-software{
+      padding-top: 1px;
+      margin-top: 5rem;
+      /* background-image: url(../images/software/cmms2.png); */
+      /* margin-bottom: 30px; */
+      /* background-size: contain;  */
+      height:180px; /* 85% of the viewport height */
+  }
+}
+
+/* Overlay */
+.home-software::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.288); */
+  z-index: 1;
+}
+/* Text Styling */
+.home-software h1,
+.home-software p {
+  position: relative;
+  z-index: 2; /* Content above overlay */
+}
+
+
+  
+  /* Gradient overlay for smooth transition to the next section */
+  .background.top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 60%, #f4f4f4 100%); /* Adjust the gradient and colors as needed */
+    z-index: 1; /* Keeps the overlay behind any text/content */
+  }
+  
+  /* Ensure that content appears above the darkened background */
+  .background.top > * {
+    position: relative;
+    z-index: 2;
+    color: white; /* Make sure the text stands out on the dark background */
+  }
+  
+  /* Name overlay for text on the image */
+  .name-overlay {
+    position: absolute;
+    top: 350px; /* Adjust the top position of the name */
+    left: 50px; /* Adjust the left position of the name */
+    font-family: 'Arial', sans-serif;
+    font-size: 60px; /* Set the font size for the name */
+    font-weight: bold; /* Make the text bold */
+    color: rgb(255, 255, 255); /* Set the text color */
+    letter-spacing: 4px;
+    z-index: 2; /* Ensure the text appears above any background image or overlay */
+    background-color: rgba(0, 0, 0, 0.493); /* Optional: add a background behind the text for visibility */
+    padding: 10px; /* Add padding to the text for better readability */
+    border-radius: 5px; /* Optional: add rounded corners to the background */
+  }
+  
+  /* Reset default body and html padding/margin */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  overflow-x: hidden; /* Prevent sideways scroll */
+}
+
+/* Apply box-sizing border-box globally */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* Products Section */
+.products-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Individual Product Card */
+.product {
+  perspective: 1000px;
+  margin: 20px;
+  width: calc(25% - 40px); /* Four products in a row */
+  height: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Inner Container for 3D Flip Effect */
+.product-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.product:hover .product-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back Faces */
+.product-front, .product-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Front Face Content */
+.product-front {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-front img {
+  max-width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.product-front h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0077cc;
+  text-align: center;
+}
+
+/* Back Face Content */
+.product-back {
+  background-color: #f4f4f4;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.product-back p {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Read More Button Styling */
+.read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #005fa360;
+}
+
+/* Responsive Design */
+
+/* Tablet Screens (Less than 1024px) */
+@media screen and (max-width: 1024px) {
+  .product {
+    width: calc(50% - 40px); /* Show 2 products per row on tablets */
+    height: 350px; /* Adjust height for smaller screens */
+  }
+}
+
+/* Mobile Screens (Less than 768px) */
+@media screen and (max-width: 768px) {
+  .product {
+    width: calc(100% - 40px); /* Show 1 product per row on small devices */
+    height: 350px;
+  }
+
+  /* Center the content in smaller screens */
+  .products-section {
+    justify-content: center;
   }
 }
