@@ -40,7 +40,6 @@ ALLOWED_HOSTS = ["engdesign.ieng.tech", ".ieng.tech"]
  
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
  
- 
 CSRF_TRUSTED_ORIGINS = ["https://*.ieng.tech"]
 # Application definition
  
