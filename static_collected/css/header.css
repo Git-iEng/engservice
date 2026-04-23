@@ -333,3 +333,125 @@ a {
     margin: 0;
   }
 }
+
+/* ===== Locations ===== */
+.ieng-container{
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 0 1rem;
+}
+
+.ieng-locations{
+  background: #f7f8fa;
+  padding: 18px 0 46px;
+}
+
+.ieng-loc-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.ieng-loc-card{
+  background: #fff;
+  border: 1px solid #e6e8ec;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 290px;
+}
+
+.ieng-loc-head{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.ieng-loc-title{
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0b1220;
+  line-height: 1.2;
+}
+
+.ieng-loc-icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  color: #0b1220;
+  flex-shrink: 0;
+}
+
+/* icon color blocks */
+.ieng-loc-card--au .ieng-loc-icon{ background: rgba(59,130,246,.22); }
+.ieng-loc-card--in .ieng-loc-icon{ background: rgba(245,158,11,.24); }
+.ieng-loc-card--fj .ieng-loc-icon{ background: rgba(16,185,129,.22); }
+
+.ieng-loc-row{
+  margin: 8px 0 0;
+  color: #0b1220;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ieng-loc-row strong{
+  color: #000;
+  font-weight: 700;
+}
+
+.ieng-loc-row a{
+  color: #007190;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.ieng-loc-row a:hover{
+  text-decoration: underline;
+}
+
+.ieng-loc-address{
+  margin: 14px 0 18px;
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* button */
+.ieng-loc-btn{
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: #0d6e8a;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.ieng-loc-btn:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px){
+  .ieng-loc-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .ieng-loc-card{
+    min-height: auto;
+  }
+}
