@@ -48,45 +48,62 @@
   {% include 'request_demo_modal.html' %}
 
   <!-- HERO -->
-  <section class="svc-hero svc-hero--fullcenter" id="home">
-  <div class="svc-container svc-container--hero">
-    
-    <div class="svc-hero__content svc-hero__content--fullcenter bo-reveal">
-      <h3>Engineering and Design</h3>
-      <div class="svc-hero__kicker">
-        <span>Engineering • Software • Energy • Automation</span>
+
+  <section class="svc-hero svc-hero--split" id="home" >
+  <div class="svc-container svc-container--hero-split">
+    <div class="svc-hero__grid">
+
+      <div class="svc-hero__content svc-hero__content--split bo-reveal" style="padding-top: 50px;">
+        <div class="svc-hero__kicker">
+          <span>Engineering • Software • Energy • Automation</span>
+        </div>
+
+        <h3 class="svc-hero__eyebrow">Engineering and Design</h3>
+
+        {% comment %} <h1 class="svc-hero__title">
+          Smart <span>Electrical Engineering Services</span> for Utilities, Industry and Infrastructure
+        </h1> {% endcomment %}
+
+        <p class="svc-hero__text">
+          iEngineering delivers practical and high-quality engineering services across power systems, industrial automation, renewable energy, asset management, design and project delivery.
+        </p>
+
+        <p class="svc-hero__text">
+          We support clients across Australia, Fiji, India and the Pacific with technical expertise, software solutions, design capability and field-ready engineering support.
+        </p>
+
+        <div class="svc-hero__actions">
+          {% comment %} <a href="#services-home" class="svc-btn svc-btn--primary">Explore Services</a> {% endcomment %}
+          <a href="#contact" class="svc-btn svc-btn--ghost js-open-demo">Talk to Our Team</a>
+        </div>
       </div>
 
-      <h1 class="svc-hero__title">
-        Smart <span>Electrical Engineering Services</span><br> for Utilities, Industry and <br>Infrastructure
-      </h1>
+      <div class="svc-hero-card bo-reveal">
+        <div class="svc-hero-card__image">
+          <img src="{% static 'images/Services/engdeisgn4.png' %}" alt="Engineering services">
+          
+        </div>
 
-      <p class="svc-hero__text">
-        iEngineering delivers practical and high-quality engineering services across power systems,
-        industrial automation, renewable energy, asset management, design and project delivery.
-      </p>
-
-      <p class="svc-hero__text">
-        We support clients across Australia, Fiji, India and the Pacific with technical expertise,
-        software solutions, design capability and field-ready engineering support.
-      </p>
-
-      <div class="svc-hero__actions svc-hero__actions--center">
-        <a href="#services-home" class="svc-btn svc-btn--primary">Explore Services</a>
-        <a href="#contact" class="svc-btn svc-btn--ghost js-open-demo">Talk to Our Team</a>
+        {% comment %} <div class="svc-hero-card__meta">
+          <h3>Integrated Engineering Support</h3>
+          <p>
+            Support across utilities, substations, industrial automation, renewable energy and technical design services tailored to project requirements.
+          </p>
+        </div> {% endcomment %}
       </div>
+
     </div>
   </div>
 </section>
-
+  
   <!-- SERVICES INTRO -->
-  <section class="products-section">
+  <section class="products-section" id="services-home">
         <!-- Product 1 -->
         <div class="product">
             <div class="product-inner">
                 <!-- Front of the Card -->
                 <div class="product-front">
-                    <img src="{% static 'images/Services/asp.png' %}" alt="Product 1">
+                    <img src="{% static 'images/Services/asp.avif' %}" alt="Product 1">
                     <h3>ASP Level 3 Design / Substation and Industrial Design</h3>
                 </div>
                 <!-- Back of the Card -->
@@ -100,11 +117,11 @@
         </div>
 
         <!-- Product 2 -->
-        <div class="product">
+        <div class="product" id="power-system-studies">
             <div class="product-inner">
                 <!-- Front of the Card -->
                 <div class="product-front">
-                    <img src="{% static 'images/Services/product2.jpg' %}" alt="Product 2">
+                    <img src="{% static 'images/Services/product2.avif' %}" alt="Product 2">
                     <h3>Power System Studies & Design</h3>
                 </div>
                 <!-- Back of the Card -->
@@ -119,11 +136,11 @@
         </div>
 
         <!-- Product 3 -->
-        <div class="product">
+        <div class="product" id="earthing-lightning">
             <div class="product-inner">
                 <!-- Front of the Card -->
                 <div class="product-front">
-                    <img src="{% static 'images/Services/three.png' %}" alt="Product 3">
+                    <img src="{% static 'images/Services/three.avif' %}" alt="Product 3">
                     <h3>Earthing, Lightning and EMFI Analysis</h3>
                 </div>
                 <!-- Back of the Card -->
@@ -140,11 +157,11 @@
             </div>
         </div>
 
-        <div class="product">
+        <div class="product" id="hvismp">
             <div class="product-inner">
                 <!-- Front of the Card -->
                 <div class="product-front">
-                    <img src="{% static 'images/Services/four.png' %}" alt="Product 3">
+                    <img src="{% static 'images/Services/four.avif' %}" alt="Product 3">
                     <h3>HVISMP</h3>
                 </div>
                 <!-- Back of the Card -->
@@ -159,11 +176,11 @@
         </div>
 
         <!-- Product 4 -->
-        <div class="product">
+        <div class="product" id="industrial-automation">
             <div class="product-inner">
                 <!-- Front of the Card -->
                 <div class="product-front">
-                    <img src="{% static 'images/Services/auto.png' %}" alt="Product 4">
+                    <img src="{% static 'images/Services/auto.avif' %}" alt="Product 4">
                     <h3>Industrial Automation Engineering</h3>
                 </div>
                 <!-- Back of the Card -->
@@ -176,11 +193,11 @@
             </div>
         </div>
         <!-- Product 5 -->
-        <div class="product">
+        <div class="product" id="green-renewable">
             <div class="product-inner">
                 <!-- Front of the Card -->
                 <div class="product-front">
-                    <img src="{% static 'images/Services/six.jpg' %}" alt="Product 5">
+                    <img src="{% static 'images/Services/six.avif' %}" alt="Product 5">
                     <h3>Green & Renewable Energy</h3>
                 </div>
                 <!-- Back of the Card -->
@@ -194,11 +211,11 @@
             </div>
         </div>
 
-        <div class="product">
+        <div class="product" id="energy-audit">
             <div class="product-inner">
                 <!-- Front of the Card -->
                 <div class="product-front">
-                    <img src="{% static 'images/Services/eight.png' %}" alt="Product 7">
+                    <img src="{% static 'images/Services/eight.avif' %}" alt="Product 7">
                     <h3>Electrical & Energy Audit</h3>
                 </div>
                 <!-- Back of the Card -->
@@ -212,11 +229,11 @@
             </div>
         </div>
         <!-- Product 8 -->
-        <div class="product">
+        <div class="product" id="telecom">
             <div class="product-inner">
                 <!-- Front of the Card -->
                 <div class="product-front">
-                    <img src="{% static 'images/Services/nine.jpg' %}" alt="Product 8">
+                    <img src="{% static 'images/Services/nine.avif' %}" alt="Product 8">
                     <h3>Telecom</h3>
                 </div>
                 <!-- Back of the Card -->
@@ -235,7 +252,7 @@
             <div class="product-inner">
     
                 <div class="product-front">
-                    <img src="{% static 'images/Services/product9.jpg' %}" alt="Product 9">
+                    <img src="{% static 'images/Services/product9.avif' %}" alt="Product 9">
                     <h3>GIS</h3>
                 </div>
              
@@ -249,11 +266,11 @@
         </div> -->
 
         <!-- Product 10 -->
-        <div class="product">
+        <div class="product" id="bess-design">
             <div class="product-inner">
                 <!-- Front of the Card -->
                 <div class="product-front">
-                    <img src="{% static 'images/Services/bess.png' %}" alt="Product 10">
+                    <img src="{% static 'images/Services/bess.avif' %}" alt="Product 10">
                     <h3>Battery Energy Storage System Design</h3>
                 </div>
                 <!-- Back of the Card -->
@@ -269,11 +286,11 @@
         </div>
 
         <!-- Product 11 -->
-        <div class="product">
+        <div class="product" id="hv-panel">
             <div class="product-inner">
                 <!-- Front of the Card -->
                 <div class="product-front">
-                    <img src="{% static 'images/Services/vpanel1.png' %}" alt="Product 11">
+                    <img src="{% static 'images/Services/vpanel1.avif' %}" alt="Product 11">
                     <h3>HV Panel Design</h3>
                 </div>
                 <!-- Back of the Card -->
@@ -287,11 +304,11 @@
             </div>
         </div>
 
-        <div class="product">
+        <div class="product" id="rpeq-services">
             <div class="product-inner">
                 <!-- Front of the Card -->
                 <div class="product-front">
-                    <img src="{% static 'images/Services/product12.png' %}" alt="Product 2">
+                    <img src="{% static 'images/Services/product12.avif' %}" alt="Product 2">
                     <h3>RPEQ Services</h3>
                 </div>
                 <!-- Back of the Card -->
@@ -305,11 +322,11 @@
                 </div>
             </div>
         </div>
-        <div class="product">
+        <div class="product" id="project-management">
             <div class="product-inner">
                 <!-- Front of the Card -->
                 <div class="product-front">
-                    <img src="{% static 'images/Services/project.png' %}" alt="Product 2">
+                    <img src="{% static 'images/Services/project.avif' %}" alt="Product 2">
                     <h3>Project Management</h3>
                 </div>
                 <!-- Back of the Card -->

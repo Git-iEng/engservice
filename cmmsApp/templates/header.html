@@ -4,224 +4,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--=============== REMIXICONS ===============-->
+
   <link rel="stylesheet" href="{% static 'css/demo_form.css' %}">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-  <!--=============== CSS ===============-->
   <link rel="stylesheet" href="{% static 'css/header.css' %}">
 </head>
 
 <body>
   {% include 'request_demo_modal.html' %}
 
-  <!--=============== HEADER ===============-->
-<header class="header">
-  <nav class="nav container" aria-label="Primary">
-    <div class="nav__data">
-      <a href="#home" class="nav__logo" data-scroll-to>
-        <img src="{% static 'images/logo.png' %}" alt="Company Logo" class="logo-img">
-      </a>
+  <header class="header">
+    <nav class="nav container" aria-label="Primary">
+      <div class="nav__data">
+        <a href="#home" class="nav__logo" data-scroll-to>
+          <img src="{% static 'images/logo.png' %}" alt="Company Logo" class="logo-img">
+        </a>
 
-      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
-        <i class="ri-menu-line nav__burger"></i>
-        <i class="ri-close-line nav__close"></i>
-      </button>
-    </div>
-
-    <!--=============== NAV MENU ===============-->
-    <div class="nav__menu" id="nav-menu">
-      <ul class="nav__list">
-        <!-- Simple section anchors (no dropdowns) -->
-        {% comment %} <li class="dropdown__item">
-          <a href="#solutions" class="nav__link" data-scroll-to>Solutions</a>
-        </li> {% endcomment %}
-        {% comment %} <li class="dropdown__item">
-          <a href="#types" class="nav__link" data-scroll-to>Types</a>
-        </li> {% endcomment %}
-       
-        {% comment %} <li class="dropdown__item">
-          <a href="#overview" class="nav__link" data-scroll-to>Our Services</a>
-        </li> {% endcomment %}
-        {% comment %} <li class="dropdown__item">
-          <a href="#process" class="nav__link" data-scroll-to>Workflow</a>
-        </li> {% endcomment %}
-        <li class="dropdown__item">
-          <a href="#about-us" class="nav__link" data-scroll-to>About</a>
-        </li>
-        
-        <li class="dropdown__item">
-          <a href="#contact" class="nav__link" data-scroll-to>Contact</a>
-        </li> 
-
-        <button type="button" class="book-demo-btn js-open-demo" data-scroll-to data-target="#request-demo">
-          Submit Inquiry <i class="bi bi-arrow-right-circle"></i>
+        <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" type="button">
+          <i class="ri-menu-line nav__burger"></i>
+          <i class="ri-close-line nav__close"></i>
         </button>
-      </ul>
-    </div>
-  </nav>
-</header>
+      </div>
 
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="dropdown__item services-dropdown">
+            <button type="button" class="nav__link services-toggle">
+              <span>Services</span>
+              <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </button>
 
-  <!-- Your sections go below … -->
+            <ul class="dropdown__menu services-menu-list">
+              <li><a href="https://asplevel3.ieng.tech/" class="dropdown__link" data-scroll-to>ASP Level 3 Design</a></li>
+              <li><a href="https://powersystemstudies.ieng.tech/" class="dropdown__link" data-scroll-to>Power System Studies &amp; Design</a></li>
+              <li><a href="https://earthinglightning.ieng.tech/" class="dropdown__link" data-scroll-to>Earthing, Lightning and EMFI Analysis</a></li>
+              <li><a href="https://hvismp.ieng.tech/" class="dropdown__link" data-scroll-to>HVISMP</a></li>
+              <li><a href="https://industrialautomation.ieng.tech/" class="dropdown__link" data-scroll-to>Industrial Automation Engineering</a></li>
+              <li><a href="https://greenrenewableenergy.ieng.tech/" class="dropdown__link" data-scroll-to>Green &amp; Renewable Energy</a></li>
+              <li><a href="https://energyaudit.ieng.tech/" class="dropdown__link" data-scroll-to>Electrical &amp; Energy Audit</a></li>
+              <li><a href="https://telecomsolution.ieng.tech/" class="dropdown__link" data-scroll-to>Telecom</a></li>
+              <li><a href="https://bess.ieng.tech/" class="dropdown__link" data-scroll-to>Battery Energy Storage System Design</a></li>
+              <li><a href="https://hvpanel.ieng.tech/" class="dropdown__link" data-scroll-to>HV Panel Design</a></li>
+              <li><a href="https://rpeq.ieng.tech/" class="dropdown__link" data-scroll-to>RPEQ Services</a></li>
+              <li><a href="https://projectmanagement.ieng.tech/" class="dropdown__link" data-scroll-to>Project Management</a></li>
+            </ul>
+          </li>
 
-  <!--=============== MAIN JS ===============-->
+          <li class="dropdown__item">
+            <a href="#about-us" class="nav__link" data-scroll-to>About</a>
+          </li>
+
+          <li class="dropdown__item">
+            <a href="#contact" class="nav__link" data-scroll-to>Contact</a>
+          </li>
+
+          <li class="nav__cta">
+            <button type="button" class="book-demo-btn js-open-demo" data-target="#request-demo">
+              Submit Inquiry
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
   <script src="{% static 'js/header.js' %}"></script>
   <script defer src="{% static 'js/demo_form.js' %}"></script>
-  <script>
-    /* ===== Smooth in-page scroll + active link + mobile close ===== */
-    (function () {
-      const header = document.querySelector('.header');
-      const navMenu = document.getElementById('nav-menu');
-      const navToggle = document.getElementById('nav-toggle');
-      const links = document.querySelectorAll('[data-scroll-to]');
-
-      function headerOffset() {
-        return header ? header.offsetHeight : 0;
-      }
-
-      function smoothScrollTo(id) {
-        const target = id ? document.querySelector(id) : null;
-        if (!target) return;
-
-        const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset();
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
-
-      function setActiveOnScroll() {
-        const sections = document.querySelectorAll('section[id]');
-        let current = '';
-        sections.forEach(sec => {
-          const secTop = sec.offsetTop - headerOffset() - 1;
-          if (pageYOffset >= secTop) current = sec.getAttribute('id');
-        });
-        document.querySelectorAll('.nav__link, .dropdown__link').forEach(a => {
-          const href = a.getAttribute('href') || a.dataset.target;
-          a.classList.toggle('active-link', href === `#${current}`);
-        });
-      }
-
-      // Click handler
-      links.forEach(el => {
-        el.addEventListener('click', (e) => {
-          const targetSel = el.getAttribute('href') || el.dataset.target;
-          if (!targetSel || !targetSel.startsWith('#')) return;
-          e.preventDefault();
-          smoothScrollTo(targetSel);
-          // close mobile menu
-          if (navMenu?.classList.contains('show-menu')) {
-            navMenu.classList.remove('show-menu');
-            navToggle?.setAttribute('aria-expanded', 'false');
-          }
-        });
-      });
-
-      // Toggle mobile nav
-      navToggle?.addEventListener('click', () => {
-        navMenu.classList.toggle('show-menu');
-        const expanded = navMenu.classList.contains('show-menu');
-        navToggle.setAttribute('aria-expanded', String(expanded));
-      });
-
-      window.addEventListener('scroll', setActiveOnScroll);
-      window.addEventListener('load', () => {
-        // If page loads with a hash, adjust to header height
-        if (window.location.hash) {
-          setTimeout(() => smoothScrollTo(window.location.hash), 0);
-        }
-        setActiveOnScroll();
-      });
-    })();
-  </script>
-  <!-- ...same head/body/header markup as you posted... -->
-
-<script>
-  /* ===== Smooth in-page scroll + active link + mobile close ===== */
-  (function () {
-    const header = document.querySelector('.header');
-    const nav = document.querySelector('.nav');               // NEW
-    const navMenu = document.getElementById('nav-menu');
-    const navToggle = document.getElementById('nav-toggle');
-    const links = document.querySelectorAll('[data-scroll-to]');
-
-    function headerOffset() {
-      return header ? header.offsetHeight : 0;
-    }
-
-    function smoothScrollTo(id) {
-      const target = id ? document.querySelector(id) : null;
-      if (!target) return;
-      const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset();
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-
-    function setActiveOnScroll() {
-      const sections = document.querySelectorAll('section[id]');
-      let current = '';
-      sections.forEach(sec => {
-        const secTop = sec.offsetTop - headerOffset() - 1;
-        if (pageYOffset >= secTop) current = sec.getAttribute('id');
-      });
-      document.querySelectorAll('.nav__link, .dropdown__link').forEach(a => {
-        const href = a.getAttribute('href') || a.dataset.target;
-        a.classList.toggle('active-link', href === `#${current}`);
-      });
-    }
-
-    function openMenu() {
-      navMenu.classList.add('show-menu');
-      nav?.classList.add('show-icon');              // NEW: swap icons
-      document.body.classList.add('no-scroll');     // Optional: lock body scroll
-      navToggle?.setAttribute('aria-expanded', 'true');
-    }
-
-    function closeMenu() {
-      navMenu.classList.remove('show-menu');
-      nav?.classList.remove('show-icon');           // NEW
-      document.body.classList.remove('no-scroll');  // Optional
-      navToggle?.setAttribute('aria-expanded', 'false');
-    }
-
-    // Click handler for in-page links
-    links.forEach(el => {
-      el.addEventListener('click', (e) => {
-        const targetSel = el.getAttribute('href') || el.dataset.target;
-        if (!targetSel || !targetSel.startsWith('#')) return;
-        e.preventDefault();
-        smoothScrollTo(targetSel);
-        closeMenu();                                 // close on navigate (mobile)
-      });
-    });
-
-    // Toggle mobile nav
-    navToggle?.addEventListener('click', () => {
-      const isOpen = navMenu.classList.contains('show-menu');
-      isOpen ? closeMenu() : openMenu();
-    });
-
-    // Close when clicking outside the menu (mobile)
-    document.addEventListener('click', (e) => {
-      const isClickInside = nav?.contains(e.target);
-      if (!isClickInside && navMenu.classList.contains('show-menu')) {
-        closeMenu();
-      }
-    });
-
-    // Close on Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && navMenu.classList.contains('show-menu')) {
-        closeMenu();
-      }
-    });
-
-    window.addEventListener('scroll', setActiveOnScroll);
-    window.addEventListener('load', () => {
-      if (window.location.hash) {
-        setTimeout(() => smoothScrollTo(window.location.hash), 0);
-      }
-      setActiveOnScroll();
-    });
-  })();
-</script>
-
 </body>
 </html>
