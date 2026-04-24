@@ -10,8 +10,6 @@ from django.contrib import messages
 import requests
 from django.conf import settings
 
-
-
 from pathlib import Path
 from datetime import datetime
 from threading import Thread

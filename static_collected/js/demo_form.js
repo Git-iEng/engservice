@@ -346,8 +346,6 @@ function validate() {
 
   return true; // all good
 }
-
-
   // loading
   function setLoading(is) {
     if (is) { submitBtn.classList.add("is-loading"); submitBtn.disabled = true; }
