@@ -1,4 +1,4 @@
-const COUNTRIES = [
+window.COUNTRIES = window.COUNTRIES || [
   { code: "AF", name: "Afghanistan", dial: "+93" },
   { code: "AL", name: "Albania", dial: "+355" },
   { code: "DZ", name: "Algeria", dial: "+213" },
@@ -243,7 +243,7 @@ const COUNTRIES = [
   const def = document.createElement("option");
   def.value = ""; def.textContent = "-- Select Country --";
   frag.appendChild(def);
-  COUNTRIES.forEach(c => {
+  window.COUNTRIES.forEach(c => {
     const o = document.createElement("option");
     o.value = `${c.code}|${c.dial}`;
     o.textContent = `${c.name} (${c.dial})`;

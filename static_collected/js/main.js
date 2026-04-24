@@ -1109,6 +1109,7 @@ metering: {
 (() => {
   const modal = document.getElementById('csc-modal');
   const form  = document.getElementById('csc-form');
+  if (!modal || !form) return;
   const close = modal.querySelector('.modal-close-csc-solar-system-csc-products');
   const successPane  = document.getElementById('csc-success');
   const docNameInput = document.getElementById('csc-doc-name');
