@@ -297,7 +297,7 @@ a {
 
   .services-menu-list {
     position: absolute;
-    top: calc(100% + 18px);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     min-width: 340px;
