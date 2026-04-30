@@ -309,8 +309,9 @@ a {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    max-height: none;
-    overflow: visible;
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+    overflow-x: hidden;
     z-index: 9999;
   }
 
